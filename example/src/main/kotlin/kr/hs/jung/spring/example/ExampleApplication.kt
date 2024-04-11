@@ -1,5 +1,6 @@
 package kr.hs.jung.spring.example
 
+import org.hibernate.cfg.Environment
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 

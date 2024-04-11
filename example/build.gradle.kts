@@ -21,8 +21,13 @@ repositories {
 
 dependencies {
 	implementation(libs.spring.boot.starter)
+	implementation(libs.spring.boot.starter.data.web)
+	implementation(libs.spring.boot.starter.data.jpa)
 	implementation(libs.kotlin.reflect)
 	testImplementation(libs.spring.boot.starter.test)
+
+	// mariadb
+	runtimeOnly(libs.mariadb.java.client)
 }
 
 tasks.withType<KotlinCompile> {

@@ -6,14 +6,19 @@ springframework-boot = "3.2.4"
 spring-dependency-management = "1.1.4"
 kotlin = "1.9.23"
 
+
 [libraries]
 # spring boot
 spring-boot-starter = { group = "org.springframework.boot", name = "spring-boot-starter" }
+spring-boot-starter-data-jpa = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa" }
+spring-boot-starter-data-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
 spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
 
 # kotiln
 kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect" }
 
+# mariadb
+mariadb-java-client = { group = "org.mariadb.jdbc", name = "mariadb-java-client" }
 
 
 [plugins]
