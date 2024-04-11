@@ -1,17 +1,18 @@
+import kr.hs.jung.config.Configurations
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id("org.springframework.boot") version "3.2.4"
-	id("io.spring.dependency-management") version "1.1.4"
-	kotlin("jvm") version "1.9.23"
-	kotlin("plugin.spring") version "1.9.23"
+	alias(libs.plugins.springframework.boot)
+	alias(libs.plugins.spring.dependency.management)
+	alias(libs.plugins.jvm)
+	alias(libs.plugins.plugin.spring)
 }
 
-group = "kr.hs.jung.spring.example"
-version = "0.0.1-SNAPSHOT"
+group = Configurations.artifactGroup
+version = Configurations.version
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = Configurations.sourceCompatibility
 }
 
 repositories {
@@ -19,15 +20,15 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter")
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation(libs.spring.boot.starter)
+	implementation(libs.kotlin.reflect)
+	testImplementation(libs.spring.boot.starter.test)
 }
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs += "-Xjsr305=strict"
-		jvmTarget = "17"
+		jvmTarget = Configurations.jvmTarget
 	}
 }
 
