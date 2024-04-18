@@ -1,5 +1,6 @@
 [versions]
 # library
+kotlin-logging = "6.0.4"
 
 # plugins
 springframework-boot = "3.2.4"
@@ -17,9 +18,11 @@ spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-
 # kotiln
 kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect" }
 
+# kotiln logging
+kotlin-logging = { group = "io.github.oshai", name = "kotlin-logging-jvm", version.ref = "kotlin-logging" }
+
 # mariadb
 mariadb-java-client = { group = "org.mariadb.jdbc", name = "mariadb-java-client" }
-
 
 [plugins]
 springframework-boot = { id = "org.springframework.boot", version.ref = "springframework-boot" }

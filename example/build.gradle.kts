@@ -26,6 +26,9 @@ dependencies {
 	implementation(libs.kotlin.reflect)
 	testImplementation(libs.spring.boot.starter.test)
 
+	// kotlin logging
+	implementation(libs.kotlin.logging)
+
 	// mariadb
 	runtimeOnly(libs.mariadb.java.client)
 }

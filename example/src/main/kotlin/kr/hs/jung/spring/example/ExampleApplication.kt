@@ -1,8 +1,10 @@
 package kr.hs.jung.spring.example
 
-import org.hibernate.cfg.Environment
+import io.github.oshai.kotlinlogging.KotlinLogging
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+
+private val logger = KotlinLogging.logger {}
 
 @SpringBootApplication
 class ExampleApplication
